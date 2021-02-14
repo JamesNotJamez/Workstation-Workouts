@@ -7,6 +7,7 @@ from titlecase import titlecase
 from time import sleep
 
 TOKEN = os.environ['SLACK_WORKSTATION_TOKEN']
+CHANNEL = os.environ['SLACK_CHANNEL']
 
 with open('exercises.yml') as f:
 	exercises_raw = yamlLoad(f, Loader=FullLoader)
@@ -38,14 +39,14 @@ while True:
 	# Check it is a weekday
 	if not day_of_week < 5:
 		print("Not a weekday, sleeping for 6 hours")
-		#sleep(21600)
-		#continue
+		sleep(21600)
+		continue
 
 	# Chcck it is inside working hours
 	if not (time > datetime.time(8) and time < datetime.time(18,00)):
 		print("Outsode of working hours, sleeping for an hour")
-		#sleep(3600)
-		#continue
+		sleep(3600)
+		continue
 
 	# Get exercise data
 	levels = list(exercises.keys())
@@ -66,7 +67,7 @@ while True:
 
 	print(f"Sending message - f{messages[type]} ")
 	# Send the message
-	client.chat_postMessage(channel='#workout', text=messages[type]) 
+	client.chat_postMessage(channel=CHANNEL, text=messages[type]) 
 
 	# Get a random sleep till the next exercise
 	# Between 20 and 40 minutes 
