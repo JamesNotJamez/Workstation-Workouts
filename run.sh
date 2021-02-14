@@ -5,4 +5,4 @@ source .env
 docker run -it --rm \
 	-e SLACK_WORKSTATION_TOKEN="$SLACK_WORKSTATION_TOKEN" \
 	-e SLACK_CHANNEL="#workout" \
-	workstation_workout_bot:latest
+	docker.io/jamesnotjamez/workstation_workout_bot:latest

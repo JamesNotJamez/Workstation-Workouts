@@ -65,12 +65,12 @@ while True:
 	# Create new slack client object
 	client = slack.WebClient(token=TOKEN)
 
-	print(f"Sending message - f{messages[type]} ")
+	print(f"Sending message - {messages[type]} ")
 	# Send the message
-	client.chat_postMessage(channel=CHANNEL, text=messages[type]) 
+	client.chat_postMessage(channel=CHANNEL, text=messages[type])
 
 	# Get a random sleep till the next exercise
-	# Between 20 and 40 minutes 
+	# Between 20 and 40 minutes
 	random_wait = randint(20, 40)
 	print(f"Sleeping for {random_wait} minutes")
 	sleep(random_wait * 60)
