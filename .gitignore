@@ -1,0 +1,2 @@
+# So that slack tokens can be added locally without being commited
+.env

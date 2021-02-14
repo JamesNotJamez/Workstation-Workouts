@@ -1,0 +1,21 @@
+---
+easy:
+  reps:
+    - crunches
+    - squats
+    - lunges
+    - calf raises
+  time:
+    - plank
+medium:
+  reps:
+    - press ups
+    - sit ups
+    - tricep dips
+  time:
+    - wall squat
+hard:
+  reps:
+    - elevated press ups
+    - diamond press ups
+    - shoulder push ups

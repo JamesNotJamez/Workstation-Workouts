@@ -1,0 +1,22 @@
+---
+easy:
+  reps:
+    min: 10
+    max: 25
+  time:
+    min: 50
+    max: 120
+medium:
+  reps:
+    min: 8
+    max: 20
+  time:
+    min: 40
+    max: 90
+hard:
+  reps:
+    min: 7
+    max: 15
+  time:
+    min: 30
+    max: 60
