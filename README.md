@@ -10,6 +10,10 @@ The Oauth token for your bot is a required environment variable. Here is a video
 ```
 -e SLACK_WORKSTATION_TOKEN=<your token>
 ```
+The slack channel is also a required environment variable.
+```
+-e SLACK_CHANNEL=<your channel>
+```
 
 You can also mount a custom exercise file or rep/time file, just make sure to follow the same format.
 ```
